@@ -1,4 +1,4 @@
-package they_are_the_same
+package same_sqrt_array
 
 import "testing"
 
@@ -14,7 +14,7 @@ func TestComp(t *testing.T) {
 	}{
 		{
 			name: "1. success",
-			args:args{
+			args: args{
 				array1: []int{121, 144, 19, 161, 19, 144, 19, 11},
 				array2: []int{11 * 11, 121 * 121, 144 * 144, 19 * 19, 161 * 161, 19 * 19, 144 * 144, 19 * 19},
 			},
@@ -22,7 +22,7 @@ func TestComp(t *testing.T) {
 		},
 		{
 			name: "2. fail",
-			args:args{
+			args: args{
 				array1: []int{121, 144, 19, 161, 19, 144, 19, 11},
 				array2: []int{11 * 21, 121 * 121, 144 * 144, 19 * 19, 161 * 161, 19 * 19, 144 * 144, 19 * 19},
 			},
@@ -30,7 +30,7 @@ func TestComp(t *testing.T) {
 		},
 		{
 			name: "fail",
-			args:args{
+			args: args{
 				array1: nil,
 				array2: []int{11 * 11, 121 * 121, 144 * 144, 19 * 19, 161 * 161, 19 * 19, 144 * 144, 19 * 19},
 			},

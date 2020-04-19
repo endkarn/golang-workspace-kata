@@ -1,4 +1,4 @@
-package they_are_the_same
+package same_sqrt_array
 
 import "math"
 
@@ -12,9 +12,9 @@ func Comp(array1 []int, array2 []int) bool {
 				return false
 			}
 		} else {
-			 if math.Sqrt(float64(array2[i])) != float64(array1[i-1]){
-			 	return false
-			 }
+			if math.Sqrt(float64(array2[i])) != float64(array1[i-1]) {
+				return false
+			}
 		}
 	}
 	return true
