@@ -29,7 +29,7 @@ func TestComp(t *testing.T) {
 			want: false,
 		},
 		{
-			name: "fail",
+			name: "3. fail",
 			args: args{
 				array1: nil,
 				array2: []int{11 * 11, 121 * 121, 144 * 144, 19 * 19, 161 * 161, 19 * 19, 144 * 144, 19 * 19},
