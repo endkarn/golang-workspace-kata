@@ -50,24 +50,18 @@ func Test_twoSum(t *testing.T) {
 }
 
 func twoSum(nums []int, target int) []int {
-	var indices []int
-	rounds := 0
-	for rounds < len(nums) {
-		targetNumber := target
-		nums = nums[rounds:]
 
-		for index, num := range nums {
-			if targetNumber-num > 0 {
-				targetNumber = targetNumber - num
-				indices = append(indices, rounds+index)
+	for i := 0; i < len(nums); i++ {
 
-			} else if targetNumber-num == 0 {
-				indices = append(indices, rounds+index)
-				return indices
+		for j := i + 1; j < len(nums); j++ {
+
+			if nums[i]+nums[j] == target {
+				return []int{i, j}
 			}
+
 		}
-		rounds++
-		indices = []int{}
+
 	}
+
 	return []int{}
 }
